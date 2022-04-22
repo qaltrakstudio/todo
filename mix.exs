@@ -56,6 +56,8 @@ defmodule Todo.MixProject do
       {:absinthe, "~> 1.6.5"},
       {:absinthe_plug, "~> 1.5.8"},
       {:bodyguard, "~> 2.4.2"},
+      {:scrivener_ecto, "~> 2.0"},
+      {:filtrex, "~> 0.4.3"},
       {:credo, "~> 1.4", only: [:dev, :test], runtime: false}
     ]
   end
