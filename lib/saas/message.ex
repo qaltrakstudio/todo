@@ -1,5 +1,5 @@
 defmodule Saas.Message do
-  use AccessCms.Schema
+  use Todo.Schema
   import Ecto.Changeset
 
   embedded_schema do
