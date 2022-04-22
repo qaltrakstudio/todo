@@ -48,7 +48,15 @@ defmodule Todo.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+      {:tesla, "~> 1.4"},
+      {:hackney, "~> 1.17"},
+      {:joken, "~> 2.4"},
+      {:joken_jwks, "~> 1.6.0"},
+      {:absinthe, "~> 1.6.5"},
+      {:absinthe_plug, "~> 1.5.8"},
+      {:bodyguard, "~> 2.4.2"},
+      {:credo, "~> 1.4", only: [:dev, :test], runtime: false}
     ]
   end
 
