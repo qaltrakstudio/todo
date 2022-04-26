@@ -10,14 +10,20 @@ defmodule TodoWeb.Router do
     plug :put_secure_browser_headers
   end
 
-  pipeline :api do
-    plug :accepts, ["json"]
-  end
-
   scope "/", TodoWeb do
     pipe_through :browser
 
     get "/", PageController, :index
+  end
+
+  scope "/api" do
+    forward "/", Absinthe.Plug, schema: TodoApi.Schema
+  end
+
+  if Mix.env() == :dev do
+    scope "/" do
+      forward "/graphiql", Absinthe.Plug.GraphiQL, schema: TodoApi.Schema
+    end
   end
 
   # Other scopes may use custom stacks.
